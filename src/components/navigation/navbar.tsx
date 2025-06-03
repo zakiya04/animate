@@ -7,13 +7,13 @@ import { Zap } from "lucide-react";
 
 export default function Navbar() {
   return(
-    <header>
-        <div>
-            <Link href='/hero'>
+    <header className="w-full h-[80px] bg-amber-400">
+        <div className='flex justify-between w-full h-full z-50'>
+            <Link href='/hero' className='bg-blue-300 flex items-center justify-center'>
                 <Zap/>
                 <span>ZenOps</span>
             </Link>
-            <nav>
+            <nav className="flex justify-center items-center bg-pink-300 gap-8">
                 <motion.div>
                   <Link href='features'>Features</Link>
                 </motion.div>
@@ -27,7 +27,11 @@ export default function Navbar() {
                   <Link href='features'>Pricing</Link>
                 </motion.div>
             </nav>
+            <div className="items-center flex justify-center m-2">
             <Button>Join WaitList</Button>
+
+            </div>
+           
         </div>
     </header>
   )
